@@ -20,7 +20,7 @@ app.post('/add-visit', (req, res) => {
         const newVisitData = req.body;
 
         // Read existing data from updates.json
-        let existingData = fs.readFileSync('updates.json');
+        let existingData = fs.readFileSync('updates.json', 'utf8');
         existingData = JSON.parse(existingData);
 
         // Append new visit data to existing data
