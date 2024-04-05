@@ -23,12 +23,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border: 1px solid #ddd; /* Border for entire table */
 }
 
 th, td {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* Border for bottom of each row */
+    border-right: 1px solid #ddd; /* Border for right side of each cell */
 }
 
 th {
