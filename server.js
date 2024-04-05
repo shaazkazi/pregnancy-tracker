@@ -37,7 +37,7 @@ app.post('/add-visit', (req, res) => {
 });
 
 // Serve updates.json file
-app.get('updates.json', (req, res) => {
+app.get('/updates.json', (req, res) => {
     res.sendFile(path.join(__dirname, 'updates.json'));
 });
 
