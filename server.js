@@ -10,8 +10,8 @@ const app = express();
 // Configure middleware (body-parser)
 app.use(bodyParser.json());
 
-// Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from the root directory
+app.use(express.static(__dirname));
 
 // Define route to handle POST request to add new visit data
 app.post('/add-visit', async (req, res) => {
@@ -43,7 +43,7 @@ app.get('/updates.json', (req, res) => {
 
 // Define route handler for the root URL ("/")
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start the server
