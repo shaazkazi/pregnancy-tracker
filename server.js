@@ -20,14 +20,14 @@ app.post('/add-visit', (req, res) => {
         const newVisitData = req.body;
 
         // Read existing data from updates.json
-        let existingData = fs.readFileSync('./updates.json');
+        let existingData = fs.readFileSync('updates.json');
         existingData = JSON.parse(existingData);
 
         // Append new visit data to existing data
         existingData.push(newVisitData);
 
         // Write updated data back to updates.json
-        fs.writeFileSync('./updates.json', JSON.stringify(existingData, null, 2));
+        fs.writeFileSync('updates.json', JSON.stringify(existingData, null, 2));
 
         res.status(200).send('Visit data added successfully');
     } catch (error) {
@@ -37,7 +37,7 @@ app.post('/add-visit', (req, res) => {
 });
 
 // Serve updates.json file
-app.get('./updates.json', (req, res) => {
+app.get('updates.json', (req, res) => {
     res.sendFile(path.join(__dirname, 'updates.json'));
 });
 
