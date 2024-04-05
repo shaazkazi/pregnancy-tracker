@@ -1,7 +1,7 @@
 // Require necessary modules
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs');
+const fs = require('fs').promises; // Using promises-based file system module
 const path = require('path');
 
 // Create an Express app
@@ -14,20 +14,20 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Define route to handle POST request to add new visit data
-app.post('/add-visit', (req, res) => {
+app.post('/add-visit', async (req, res) => {
     try {
         // Extract new visit data from request body
         const newVisitData = req.body;
 
-        // Read existing data from updates.json
-        let existingData = fs.readFileSync('updates.json', 'utf8');
+        // Read existing data from updates.json asynchronously
+        let existingData = await fs.readFile('updates.json', 'utf8');
         existingData = JSON.parse(existingData);
 
         // Append new visit data to existing data
         existingData.push(newVisitData);
 
-        // Write updated data back to updates.json
-        fs.writeFileSync('updates.json', JSON.stringify(existingData, null, 2));
+        // Write updated data back to updates.json asynchronously
+        await fs.writeFile('updates.json', JSON.stringify(existingData, null, 2));
 
         res.status(200).send('Visit data added successfully');
     } catch (error) {
