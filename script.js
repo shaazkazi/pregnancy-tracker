@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <td>${formattedDate}</td>
                 <td>${entry.details}</td>
                 <td>${entry.remarks}</td>
+                <td>${entry.reportLink ? `<a href="${entry.reportLink}" target="_blank">View Report</a>` : ''}</td>
             `;
             trackerBody.appendChild(row);
         });
