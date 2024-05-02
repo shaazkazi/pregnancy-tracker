@@ -58,3 +58,8 @@ button:hover {
         /* Remove overflow property */
     }
 }
+#weeksDaysFooter {
+    text-align: center;
+    font-size: 1.5em; /* Increase font size */
+    color: #b81515; /* Color */
+}
