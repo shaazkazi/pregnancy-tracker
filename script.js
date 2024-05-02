@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const daysDifference = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24)) + 1;
         const weeks = Math.floor(daysDifference / 7);
         const days = daysDifference % 7;
-        weeksDaysFooter.textContent = `Current: ${weeks} weeks and ${days} days`;
+        weeksDaysFooter.textContent = `${weeks} weeks and ${days} days`;
         document.body.appendChild(weeksDaysFooter);
     }
 
