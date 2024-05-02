@@ -3,20 +3,13 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px; /* Added font size for mobile compatibility */
 }
 
 h1 {
     text-align: center;
     color: #333;
+    font-size: 24px; /* Adjusted font size for heading */
 }
 
 table {
@@ -27,7 +20,7 @@ table {
 }
 
 th, td {
-    padding: 10px;
+    padding: 8px; /* Reduced padding for cells */
     text-align: left;
     border-bottom: 1px solid #ddd; /* Border for bottom of each row */
     border-right: 1px solid #ddd; /* Border for right side of each cell */
@@ -36,6 +29,7 @@ th, td {
 th {
     background-color: #4CAF50;
     color: white;
+    font-size: 16px; /* Adjusted font size for header cells */
 }
 
 tbody tr:nth-child(even) {
@@ -46,21 +40,8 @@ tbody tr:hover {
     background-color: #ddd;
 }
 
-input[type="text"],
-input[type="date"] {
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-input[type="date"]::placeholder {
-    color: #999;
-    font-style: italic;
-}
-
 button {
-    padding: 10px 20px;
+    padding: 8px 16px; /* Reduced padding for buttons */
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -74,6 +55,6 @@ button:hover {
 
 @media (max-width: 768px) {
     table {
-        overflow-x: auto;
+        /* Remove overflow property */
     }
 }
