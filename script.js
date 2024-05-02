@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const trackerBody = document.getElementById("trackerBody");
+    const weeksDaysFooter = document.createElement("div");
+    weeksDaysFooter.id = "weeksDaysFooter"; // Add id to the footer element
     
     // Fetch data from updates.json
     fetch('updates.json')
@@ -15,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Sort the data by date in ascending order
         data.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-        trackerBody.innerHTML = "";
         let startDate = new Date(data[0].date);
+        trackerBody.innerHTML = "";
         data.forEach((entry, index) => {
             const currentDate = new Date(entry.date);
             const daysDifference = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24)) + 1;
@@ -34,47 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
             trackerBody.appendChild(row);
         });
+
+        // Calculate and display current weeks and days
+        const currentDate = new Date();
+        const daysDifference = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24)) + 1;
+        const weeks = Math.floor(daysDifference / 7);
+        const days = daysDifference % 7;
+        weeksDaysFooter.textContent = `Current: ${weeks} weeks and ${days} days`;
+        document.body.appendChild(weeksDaysFooter);
     }
-
-    window.addVisit = function() {
-        const visitDetails = document.getElementById("visitDetails").value.trim();
-        const visitRemarks = document.getElementById("visitRemarks").value.trim();
-        const visitDate = document.getElementById("visitDate").value;
-
-        if (visitDetails !== "") {
-            // Create an object with the new visit data
-            const newVisit = {
-                date: visitDate,
-                details: visitDetails,
-                remarks: visitRemarks
-            };
-
-            // Send a POST request to the server to add the new visit data
-            fetch('/add-visit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(newVisit)
-            })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Visit data added successfully');
-                    // Refresh the page to update the displayed data
-                    location.reload();
-                } else {
-                    console.error('Failed to add visit data:', response.statusText);
-                    alert('Failed to add visit data. Please try again.');
-                }
-            })
-            .catch(error => {
-                console.error('Error adding visit data:', error);
-                alert('Error adding visit data. Please try again.');
-            });
-        } else {
-            alert("Please enter visit details.");
-        }
-    };
 
     // Function to format the date as "dd-Mon-yy" (e.g., 02-Apr-24)
     function formatDate(date) {
