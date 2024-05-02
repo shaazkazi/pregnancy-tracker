@@ -12,7 +12,6 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
 }
 
 h1 {
@@ -31,6 +30,7 @@ th, td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd; /* Border for bottom of each row */
+    border-right: 1px solid #ddd; /* Border for right side of each cell */
 }
 
 th {
@@ -72,7 +72,8 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Remove right border from last cell in each row */
-td:last-child {
-    border-right: none;
+@media (max-width: 768px) {
+    table {
+        overflow-x: auto;
+    }
 }
