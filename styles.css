@@ -89,3 +89,7 @@ tbody tr:hover a {
     color: #4CAF50; /* Change link color within hovered row */
 }
 
+th:hover, td:hover {
+    border-bottom: 1px solid #ddd; /* Border color for bottom of each row when hovered */
+    border-right: 1px solid #ddd; /* Border color for right side of each cell when hovered */
+}
