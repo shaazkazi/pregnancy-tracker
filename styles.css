@@ -27,7 +27,7 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #960D00;
     color: white;
     font-size: 16px; /* Adjusted font size for header cells */
 }
@@ -42,7 +42,7 @@ tbody tr:hover {
 
 button {
     padding: 8px 16px; /* Reduced padding for buttons */
-    background-color: #4CAF50;
+    background-color: #960D00;
     color: white;
     border: none;
     border-radius: 5px;
