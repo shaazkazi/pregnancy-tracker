@@ -63,3 +63,12 @@ button:hover {
     font-size: 1.5em; /* Increase font size */
     color: #b81515; /* Color */
 }
+header {
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
