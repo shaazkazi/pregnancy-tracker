@@ -62,9 +62,20 @@ button:hover {
     text-align: center;
     font-size: 1.5em; /* Increase font size */
     color: #b81515; /* Color */
-}
 header {
     text-align: center;
+}
+
+header img {
+    height: auto;
+    max-width: 30%; /* Default for PC screens */
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 600px) {
+    header img {
+        max-width: 80%; /* Adjusted width for mobile screens */
+    }
 }
 
 header img {
