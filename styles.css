@@ -63,11 +63,10 @@ button:hover {
     text-align: center;
     font-size: 1.5em; /* Increase font size */
     color: #b81515; /* Text color */
-    padding: 20px; /* Add padding */
     background-color: #f9f9f9; /* Background color */
     border-radius: 10px; /* Border radius */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    display: inline-block; /* Ensure it wraps its content */
+    
 }
 
 header {
