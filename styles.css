@@ -77,4 +77,13 @@ tbody tr:hover {
     background-color: #960D00; /* Change background color */
     color: #fff; /* Change text color */
 }
+a {
+    color: blue; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+a:hover {
+    color: #4CAF50; /* Link color on hover */
+}
 
