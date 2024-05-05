@@ -68,13 +68,6 @@ header {
 }
 
 header img {
+    max-width: 100%;
     height: auto;
-    max-width: 30%; /* Default for PC screens */
-}
-
-/* Media query for mobile screens */
-@media only screen and (max-width: 600px) {
-    header img {
-        max-width: 30%; /* Adjusted width for mobile screens */
-    }
 }
