@@ -22,8 +22,8 @@ table {
 th, td {
     padding: 8px; /* Reduced padding for cells */
     text-align: left;
-    border-bottom: 1px solid #ddd; /* Border for bottom of each row */
-    border-right: 1px solid #ddd; /* Border for right side of each cell */
+    border-bottom: 1px solid #960D00; /* Border for bottom of each row */
+    border-right: 1px solid #960D00; /* Border for right side of each cell */
 }
 
 th {
