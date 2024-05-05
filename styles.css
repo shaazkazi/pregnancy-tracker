@@ -73,3 +73,8 @@ header img {
     max-width: 100%;
     height: auto;
 }
+tbody tr:hover {
+    background-color: #960D00; /* Change background color */
+    color: #fff; /* Change text color */
+}
+
