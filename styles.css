@@ -22,12 +22,12 @@ table {
 th, td {
     padding: 8px; /* Reduced padding for cells */
     text-align: left;
-    border-bottom: 1px solid #03fca1; /* Border for bottom of each row */
-    border-right: 1px solid #03fca1; /* Border for right side of each cell */
+    border-bottom: 1px solid #048221; /* Border for bottom of each row */
+    border-right: 1px solid #048221; /* Border for right side of each cell */
 }
 
 th {
-    background-color: #03fca1;
+    background-color: #048221;
     color: white;
     font-size: 16px; /* Adjusted font size for header cells */
 }
@@ -42,7 +42,7 @@ tbody tr:hover {
 
 button {
     padding: 8px 16px; /* Reduced padding for buttons */
-    background-color: #03fca1;
+    background-color: #048221;
     color: white;
     border: none;
     border-radius: 5px;
@@ -66,7 +66,7 @@ button:hover {
     background-color: #f9f9f9; /* Background color */
     border-radius: 10px; /* Border radius */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    border: 2px solid #03fca1; /* Border color */
+    border: 2px solid #000; /* Border color */
     font-weight: bold; /* Make the text bold */
 }
 
@@ -81,7 +81,7 @@ header img {
     height: auto;
 }
 tbody tr:hover {
-    background-color: #03fca1; /* Change background color */
+    background-color: #048221; /* Change background color */
     color: #fff; /* Change text color */
 }
 
